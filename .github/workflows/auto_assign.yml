@@ -14,7 +14,7 @@ jobs:
           REVIEWERS: "ShuheiYoshino" # edit here
         run: |
           # "hoge, fuga, piyo" を ["hoge", "fuga", "piyo"]に変換
-          reviewer=$(echo "\"${REVIEWERS// /}\"" | jq 'split(",")')
+          reviewers=$(echo "\"${REVIEWERS// /}\"" | jq 'split(",")')
           curl -X POST \
             -H "Content-Type: application/json" \
             -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
