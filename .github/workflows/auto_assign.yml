@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Set reviewers
         env:
-          REVIEWERS: "ShuheiYoshino" # edit here
+          REVIEWERS: "Yoshino-test" # edit here
         run: |
           # "hoge, fuga, piyo" を ["hoge", "fuga", "piyo"]に変換
           reviewers=$(echo "\"${REVIEWERS// /}\"" | jq 'split(",")')
